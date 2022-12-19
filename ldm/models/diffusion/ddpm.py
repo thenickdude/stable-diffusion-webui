@@ -620,7 +620,7 @@ class LatentDiffusion(DDPM):
         self,
         first_stage_config,
         cond_stage_config,
-        personalization_config,
+        personalization_config=None,
         num_timesteps_cond=None,
         cond_stage_key='image',
         cond_stage_trainable=False,
