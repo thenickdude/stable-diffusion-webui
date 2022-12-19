@@ -18,7 +18,7 @@
 
 txt2img:
   prompt:
-  ddim_steps: 50
+  ddim_steps: 20
   # Adding an int to toggles enables the corresponding feature.
   #  0:  Create prompt matrix (separate multiple prompts using |, and get all combinations of them)
   #  1:  Normalize Prompt Weights (ensure sum of weights add up to 1.0)
@@ -31,8 +31,8 @@ txt2img:
   #  8:  Filter NSFW content
   #  9:  Fix faces using GFPGAN
   #  10:  Upscale images using RealESRGAN
-  toggles: [1, 2, 3, 4, 5]
-  sampler_name: k_lms
+  toggles: [1, 2, 4, 5]
+  sampler_name: k_euler
   ddim_eta: 0.0  # legacy name, applies to all algorithms.
   n_iter: 1
   batch_size: 1
@@ -46,7 +46,7 @@ txt2img:
 
 img2img:
   prompt:
-  ddim_steps: 50
+  ddim_steps: 25
   # Adding an int to toggles enables the corresponding feature.
   # 0: Create prompt matrix (separate multiple prompts using |, and get all combinations of them)
   # 1: Normalize Prompt Weights (ensure sum of weights add up to 1.0)
@@ -61,8 +61,8 @@ img2img:
   # 10: Filter NSFW content
   # 11: Fix faces using GFPGAN
   # 12: Upscale images using Real-ESRGAN
-  toggles: [1, 4, 5, 6, 7]
-  sampler_name: k_lms
+  toggles: [1, 4, 6, 7]
+  sampler_name: k_euler
   ddim_eta: 0.0
   n_iter: 1
   batch_size: 1
