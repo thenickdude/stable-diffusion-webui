@@ -102,4 +102,4 @@ config = {
 }
 logger.configure(**config)
 
-logger.add("logs/log_{time:MM-DD-YYYY!UTC}.log", rotation="8 MB", compression="zip", level='INFO')    # Once the file is too old, it's rotated
+logger.add("/var/run/stable-diffusion/logs/log_{time:MM-DD-YYYY!UTC}.log", rotation="8 MB", compression="zip", level='INFO')    # Once the file is too old, it's rotated
